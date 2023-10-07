@@ -8,15 +8,7 @@
 
 using namespace std;
 
-void *input_thread_work(void *arg)
-{
-    struct Snake *snake = (struct Snake *)arg;
-    while (true)
-    {
-        enum Direction direction = get_input();
-        snake->update_next_direction(direction);
-    }
-}
+
 
 Snake::Snake(void)
 {
